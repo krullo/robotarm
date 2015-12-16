@@ -1,0 +1,24 @@
+#include <Stegmotor.h>
+
+const int pwr_a = 5;
+const int pwr_b = 9;
+const int dir_a = 4;
+const int dir_b = 8;
+int endup = 2;
+int enddown = 3;
+
+Stegmotor arm(pwr_a, pwr_b, dir_a, dir_b, endup, enddown);
+
+void setup() {
+  // put your setup code here, to run once:
+  arm.endposition(40);
+}
+
+void loop() {
+  // put your main code here, to run repeatedly:
+arm.turn(100);
+delay(1000);
+arm.turn(-100);
+delay(1000);
+
+}
